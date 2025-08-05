@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Fredoka+One:wght@400&display=swap');
+/* Import Google Fonts */ @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Fredoka+One:wght@400;600&family=Quicksand:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600;700&display=swap'); /* Dreamy Clouds - Complete Style */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Gradient yang lebih harmonis dengan transisi mulus */
+    /* background: linear-gradient(135deg, #FFB6C1 0%, #FFCCCB 50%, #FFE4E1 100%); */
+    background: linear-gradient(135deg, #F8F9FA 0%, #F0F3F7 20%, #E8F1F5 40%, #F5E8F0 60%, #F0E8F5 80%, #F8F0F5 100%);
+    /* min-height: 100vh; */
+    /* font-family: 'Cute Font', cursive; */
+    font-family: 'Poppins', sans-serif; 
+    min-height: 100vh; 
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    /* Warna pink yang lebih lembut tapi tetap cerah */
+    color: #FF69B4;
+    font-size: 20px;
+    animation: sparkle 1.5s ease-in-out infinite;
+}
+
+.peach-goma{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    justify-content: right;
+    left: 85%;
+}
+
+.goma-give-love{
+    width: 50px;
+    height: 50px;
+    left: 80%;
+}
+
+.heart:nth-child(1) { top: 15%; left: 8%; animation-delay: 0.3s; }
+.heart:nth-child(2) { top: 45%; right: 25%; animation-delay: 1.2s; }
+.heart:nth-child(3) { bottom: 18%; left: 35%; animation-delay: 0.7s; }
+.heart:nth-child(4) { bottom: 40%; right: 12%; animation-delay: 2.1s; }
+.heart:nth-child(5) { top: 65%; left: 22%; animation-delay: 0.9s; }
+.heart:nth-child(6) { top: 30%; right: 40%; animation-delay: 1.8s; }
+.heart:nth-child(7) { bottom: 55%; left: 18%; animation-delay: 0.4s; }
+.heart:nth-child(8) { bottom: 25%; right: 30%; animation-delay: 1.6s; }        
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1); }
+} 
+
+.container {
+    text-align: center;
+    border-radius: 30px;
+    /* Background dengan gradasi yang lebih soft dan harmonis */
+    /* background: linear-gradient(135deg, 
+        rgba(255, 182, 193, 0.85) 0%, 
+        rgba(255, 204, 203, 0.9) 50%, 
+         rgba(255, 228, 225, 0.95) 100%)*/
+    backdrop-filter: blur(15px); 
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.95) 0%, rgba(245, 232, 240, 0.9) 50%, rgba(240, 232, 245, 0.95) 100%); border: 2px solid rgba(176, 196, 222, 0.3); box-shadow: 0 15px 35px rgba(176, 196, 222, 0.15);
+    /* Border dengan warna yang lebih subtle */
+    border: 2px solid rgba(255, 105, 180, 0.3);
+    display: inline-block; 
+    justify-content: center; 
+    align-items: center; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    margin: 10px;
+    padding: 20px;
+    /* Shadow yang lebih soft */
+    /* box-shadow: 0 10px 30px rgba(255, 105, 180, 0.25); */
+    backdrop-filter: blur(15px); 
+    border: 3px solid transparent; 
+    background-clip: padding-box; 
+    border-radius: 25px; 
+    box-shadow: 0 15px 35px rgba(176, 196, 222, 0.15); 
+    border: 2px solid rgba(221, 160, 221, 0.4); 
+
+}
+
+
+h1 {
+    /* font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    /* Warna pink yang lebih deep tapi tetap vibrant 
+    color: #E91E63; */
+    font-family: 'Quicksand', sans-serif; font-size: 2.2rem; font-weight: 600; color: #6A5ACD;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    /* text-shadow: 3px 3px 6px rgba(233, 30, 99, 0.3); */
+    text-shadow: 0 0 20px rgba(106, 90, 205, 0.3);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 3px 3px 6px rgba(233, 30, 99, 0.3); }
+    to { text-shadow: 3px 3px 20px rgba(233, 30, 99, 0.6); }
+}
+
+.message {
+    /* font-size: 1.5rem;
+    /* Warna ungu yang lebih soft dan readable */
+    /* color: #AD1457;
+    margin-bottom: 40px;
+    line-height: 1; */
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.2rem; 
+    color: #483D8B; 
+    line-height: 1;
+} 
+
+.kado{
+    font-size: 3rem;
+    animation: wiggle 2s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+    0%, 7% { transform: rotateZ(0); }
+    15% { transform: rotateZ(-15deg); }
+    20% { transform: rotateZ(10deg); }
+    25% { transform: rotateZ(-10deg); }
+    30% { transform: rotateZ(6deg); }
+    35% { transform: rotateZ(-4deg); }
+    40%, 100% { transform: rotateZ(0); }
+}
+
+.choice-buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    /* font-family: 'Fredoka One', cursive;
+    font-size: 1rem; */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Cute Font', cursive; 
+    font-size: 1.1rem;
+}
+
+.btn-yes {
+    /* Gradient yang selaras dengan container - soft pink tones */
+    /* background: linear-gradient(45deg, #FFB6C1 0%, #FF91A4 100%);
+    color: #8B2635;
+    border: 2px solid rgba(255, 182, 193, 0.6);
+    box-shadow: 0 6px 12px rgba(255, 182, 193, 0.4); */
+    max-width: 400px;
+    font-weight: 600;
+    background: linear-gradient(45deg, #F0F3F7 0%, #F5E8F0 50%, #F0E8F5 100%); 
+    color: #483D8B; 
+    border: 2px solid rgba(176, 196, 222, 0.4); 
+    box-shadow: 0 8px 20px rgba(176, 196, 222, 0.2);
+}
+
+.btn-yes:hover {
+    /* transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(255, 182, 193, 0.6);
+    /* Hover dengan warna yang sedikit lebih cerah 
+    background: linear-gradient(45deg, #FFC0CB 0%, #FFAAB8 100%); */
+    border-color: rgba(255, 145, 164, 0.8);
+    transform: translateY(-3px); 
+    box-shadow: 0 12px 25px rgba(176, 196, 222, 0.3); 
+    background: linear-gradient(45deg, #E8F1F5 0%, #F0E8F5 50%, #F5E8F0 100%); 
+}
+
+.btn-no {
+    /* Gradient yang komplementer tapi tetap soft */
+    /* background: linear-gradient(45deg, #FFE4E1 0%, #FFCCCB 100%);
+    color: #8B4C52;
+    border: 2px solid rgba(255, 204, 203, 0.6);
+    box-shadow: 0 6px 12px rgba(255, 204, 203, 0.4); */
+    max-width: 400px;
+    font-weight: 600;
+    background: linear-gradient(45deg, #F8F0F5 0%, #F0F3F7 50%, #E8F1F5 100%); 
+    color: #2F4F4F; 
+    border: 2px solid rgba(221, 160, 221, 0.4); 
+    box-shadow: 0 8px 20px rgba(221, 160, 221, 0.2);
+}
+
+.btn-no:hover {
+    /* transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(255, 204, 203, 0.6);
+    /* Hover dengan warna yang sedikit lebih dalam */
+    background: linear-gradient(45deg, #FFCCCB 0%, #FFB6C1 100%); 
+    border-color: rgba(255, 145, 164, 0.8);
+    transform: translateY(-3px); 
+    box-shadow: 0 12px 25px rgba(221, 160, 221, 0.3); 
+    background: linear-gradient(45deg, #F5E8F0 0%, #E8F1F5 50%, #F0F3F7 100%);
+}
+
+.cute-goma{
+    justify-content: center;
+    width: 70px;
+    height: 70px;  
+    margin-right: 10px;
+}
+
+.goma-sad{
+    justify-content: center;
+    width: 70px;
+    height: 70px;  
+    margin-right: 10px;
+}
+
+.sparkle {
+    position: absolute;
+    /* Warna emas yang lebih warm */
+    color: #FFD54F;
+    font-size: 24px;
+    animation: sparkle 1.5s ease-in-out infinite;
+}
+
+.sparkle:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+.sparkle:nth-child(2) { top: 20%; right: 10%; animation-delay: 0.5s; }
+.sparkle:nth-child(3) { bottom: 30%; left: 10%; animation-delay: 1s; }
+.sparkle:nth-child(4) { bottom: 10%; right: 20%; animation-delay: 1.5s; }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulator Menstruasi</title>
+<link rel="stylesheet" href="page5.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Kalkulator Menstruasi</h1>
+    <p>Masukkan data berikut:</p>
+    <p class="disclaimer">Jangan Khawatir!! <br> Data yang dimasukkan di sini tidak akan diketahui oleh siapapun selain penggunanya sendiri</p>
+
+    <label for="lastPeriod">Tanggal hari pertama haid terakhir:</label>
+    <input type="date" id="lastPeriod">
+
+    <label for="cycleLength">Panjang siklus menstruasi (hari):</label>
+    <input type="number" id="cycleLength" min="20" max="40" value="28">
+
+    <label for="periodDuration">Lama menstruasi (hari):</label>
+    <input type="number" id="periodDuration" min="2" max="10" value="5">
+
+    <button onclick="calculate()">Hitung</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function calculate() {
+      const lastPeriodInput = document.getElementById("lastPeriod").value;
+      const cycleLength = parseInt(document.getElementById("cycleLength").value);
+      const periodDuration = parseInt(document.getElementById("periodDuration").value);
+
+      if (!lastPeriodInput || isNaN(cycleLength) || isNaN(periodDuration)) {
+        alert("Mohon isi semua data dengan benar.");
+        return;
+      }
+
+      const lastPeriodDate = new Date(lastPeriodInput);
+      const nextPeriodStart = new Date(lastPeriodDate);
+      nextPeriodStart.setDate(nextPeriodStart.getDate() + cycleLength);
+
+      const nextPeriodEnd = new Date(nextPeriodStart);
+      nextPeriodEnd.setDate(nextPeriodStart.getDate() + periodDuration - 1);
+
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = `
+        <h3>Perkiraan Hasil:</h3>
+        <p>🩸 Menstruasi Berikutnya: <strong>${nextPeriodStart.toLocaleDateString('id-ID', options)}</strong></p>
+        <p>✅ Selesai Menstruasi: <strong>${nextPeriodEnd.toLocaleDateString('id-ID', options)}</strong></p>
+      `;
+    }
+  </script>
+</body>
+</html>

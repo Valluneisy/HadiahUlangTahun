@@ -1,0 +1,422 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffb3d1, #ffd1dc, #ffe4e1);
+  color: #333;
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem; /* 16px - font dasar */
+}
+
+h1 {
+  font-size: 4rem; /* 64px - sebagai referensi */
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.5rem; /* 40px */
+  margin: 0 0 0.8rem 0;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2rem; /* 32px */
+  margin: 0 0 0.6rem 0;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.5rem; /* 24px */
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1.25rem; /* 20px */
+  margin: 0 0 0.4rem 0;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1.125rem; /* 18px */
+  margin: 0 0 0.3rem 0;
+  font-weight: 500;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+p{
+  font-size: 2.5rem
+}
+
+.disclaimer {
+  font-size: 2rem; /* 18px - sedikit lebih besar dari body */
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+label{
+  font-size: 1.7rem; /* 18px - sama dengan disclaimer */
+  
+}
+
+input, button {
+  padding: 12px 15px;
+  font-size: 1.7rem; /* 18px - sama dengan disclaimer */
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Khusus untuk input agar tidak zoom di iOS */
+input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+button {
+  background-color: #ec407a;
+  color: white;
+  border: none;
+  padding: 15px 24px;
+  border-radius: 30px;
+  font-size: 1.125rem; /* 18px */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(236, 64, 122, 0.3);
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:hover {
+  background-color: #d81b60;
+  box-shadow: 0 6px 14px rgba(216, 27, 96, 0.4);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.result {
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem; /* 18px */
+  color: #b30059;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* Media queries untuk responsivitas */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+    align-items: flex-start;
+    padding-top: 25px;
+    font-size: 1rem; /* 16px */
+  }
+  
+  h1 {
+    font-size: 3rem; /* 48px - lebih kecil untuk tablet */
+  }
+  
+  h2 {
+    font-size: 2rem; /* 32px */
+  }
+  
+  h3 {
+    font-size: 1.75rem; /* 28px */
+  }
+  
+  h4 {
+    font-size: 1.375rem; /* 22px */
+  }
+  
+  h5 {
+    font-size: 1.125rem; /* 18px */
+  }
+  
+  h6 {
+    font-size: 1rem; /* 16px */
+  }
+  
+  .container {
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 100%;
+  }
+  
+  .disclaimer {
+    font-size: 1.125rem; /* 18px */
+  }
+  
+  input, button {
+    padding: 18px 15px;
+    font-size: 1.125rem; /* 18px */
+  }
+  
+  button {
+    padding: 20px 25px;
+    font-size: 1.125rem; /* 18px */
+  }
+  
+  .result {
+    padding: 18px 20px;
+    font-size: 1.125rem; /* 18px */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+    padding-top: 20px;
+    font-size: 1rem; /* 16px */
+  }
+  
+  h1 {
+    font-size: 2.5rem; /* 40px - lebih kecil untuk mobile */
+  }
+  
+  h2 {
+    font-size: 1.75rem; /* 28px */
+  }
+  
+  h3 {
+    font-size: 1.5rem; /* 24px */
+  }
+  
+  h4 {
+    font-size: 1.25rem; /* 20px */
+  }
+  
+  h5 {
+    font-size: 1.125rem; /* 18px */
+  }
+  
+  h6 {
+    font-size: 1rem; /* 16px */
+  }
+  
+  .container {
+    padding: 20px;
+    border-radius: 12px;
+    margin: 0;
+  }
+  
+  .disclaimer {
+    font-size: 1rem; /* 16px */
+  }
+  
+  input, button {
+    padding: 16px 12px;
+    margin: 10px 0;
+    font-size: 1rem; /* 16px */
+  }
+  
+  button {
+    padding: 18px 20px;
+    font-size: 1rem; /* 16px */
+  }
+  
+  .result {
+    padding: 15px 18px;
+    font-size: 1rem; /* 16px */
+  }
+}
+
+/* Perbaikan untuk perangkat dengan layar sangat kecil */
+@media (max-width: 360px) {
+  body {
+    padding: 10px;
+    padding-top: 15px;
+  }
+  
+  h1 {
+    font-size: 2.25rem; /* 36px */
+  }
+  
+  h2 {
+    font-size: 1.625rem; /* 26px */
+  }
+  
+  h3 {
+    font-size: 1.375rem; /* 22px */
+  }
+  
+  h4 {
+    font-size: 1.125rem; /* 18px */
+  }
+  
+  h5 {
+    font-size: 1rem; /* 16px */
+  }
+  
+  h6 {
+    font-size: 0.875rem; /* 14px */
+  }
+  
+  .container {
+    padding: 18px;
+    border-radius: 10px;
+  }
+  
+  .disclaimer {
+    font-size: 0.875rem; /* 14px */
+    margin-bottom: 18px;
+  }
+  
+  input, button {
+    font-size: 0.875rem; /* 14px */
+    padding: 14px 10px;
+    margin: 8px 0;
+  }
+  
+  button {
+    padding: 16px 18px;
+    font-size: 0.875rem; /* 14px */
+  }
+  
+  .result {
+    padding: 12px 15px;
+    font-size: 0.875rem; /* 14px */
+  }
+}
+
+/* Perbaikan untuk layar dengan tinggi terbatas (landscape mobile) */
+@media (max-height: 600px) and (orientation: landscape) {
+  body {
+    align-items: flex-start;
+    padding-top: 10px;
+  }
+  
+  h1 {
+    font-size: 2rem; /* 32px - lebih kecil untuk landscape */
+  }
+  
+  h2 {
+    font-size: 1.5rem; /* 24px */
+  }
+  
+  h3 {
+    font-size: 1.25rem; /* 20px */
+  }
+  
+  h4 {
+    font-size: 1.125rem; /* 18px */
+  }
+  
+  h5 {
+    font-size: 1rem; /* 16px */
+  }
+  
+  h6 {
+    font-size: 0.875rem; /* 14px */
+  }
+  
+  .container {
+    margin-top: 0;
+  }
+  
+  .disclaimer {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 0.875rem; /* 14px */
+  }
+  
+  input, button {
+    margin: 5px 0;
+    font-size: 0.875rem; /* 14px */
+    padding: 12px 15px;
+  }
+  
+  button {
+    padding: 14px 20px;
+  }
+  
+  .result {
+    margin-top: 10px;
+    font-size: 0.875rem; /* 14px */
+  }
+}
+
+/* Perbaikan untuk iPhone SE dan perangkat kecil lainnya */
+@media (max-width: 320px) {
+  body {
+    padding: 8px;
+    padding-top: 12px;
+  }
+  
+  h1 {
+    font-size: 2rem; /* 32px */
+  }
+  
+  h2 {
+    font-size: 1.5rem; /* 24px */
+  }
+  
+  h3 {
+    font-size: 1.25rem; /* 20px */
+  }
+  
+  h4 {
+    font-size: 1rem; /* 16px */
+  }
+  
+  h5 {
+    font-size: 0.875rem; /* 14px */
+  }
+  
+  h6 {
+    font-size: 0.75rem; /* 12px */
+  }
+  
+  .container {
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .disclaimer {
+    font-size: 0.75rem; /* 12px */
+  }
+  
+  input, button {
+    font-size: 0.75rem; /* 12px */
+    padding: 12px 8px;
+  }
+  
+  button {
+    padding: 14px 12px;
+    font-size: 0.75rem; /* 12px */
+  }
+  
+  .result {
+    font-size: 0.75rem; /* 12px */
+    padding: 10px 12px;
+  }
+}
